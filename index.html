@@ -65,8 +65,26 @@ name<!DOCTYPE html>
         <p id="error-message"></p>
     </div>
     <div class="button-container" style="display:none" id="download-buttons">
-        <button onclick="downloadFile('archivo1.pdf')">Descargar Archivo 1</button>
-        <button onclick="downloadFile('archivo2.zip')">Descargar Archivo 2</button>
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LEhpqOOH9i_47O4BVOpJqKVybxhMQmtFvpapYsrPoDdMWG3bUTGY8OLxOKtU42vIZ3BddEE_O?gv=true',
+              color: '#039BE5',
+              label: "Reserva Aula Viva",
+              target,
+            });
+          });
+        })();
+        </script>
+<!-- end Google Calendar Appointment Scheduling -->
+
+
+        
     </div>
 
     <script>
