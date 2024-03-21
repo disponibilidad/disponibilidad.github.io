@@ -56,8 +56,8 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenido a nuestra de reserva de aulas</h1>
-    <p>Por favor, ingresa tus credenciales para continuar:</p>
+    <h1>Bienvenido a nuestra página de reserva de aulas</h1>
+    <p id="txt1">Por favor, ingresa tus credenciales para continuar:</p>
     <div id="login-form">
         <input type="text" id="username" placeholder="Usuario"><br>
         <input type="password" id="password" placeholder="Contraseña"><br>
@@ -99,6 +99,7 @@
                 document.getElementById("login-form").style.display = "none";
                 document.getElementById("download-buttons").style.display = "block";
                 document.getElementById("error-message").textContent = "";
+                document.getElementById("txt1").textContent = "";
             } else {
                 document.getElementById("error-message").textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
             }
