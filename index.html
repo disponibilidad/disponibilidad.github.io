@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #login-form {
+            margin-top: 50px;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #login-button {
+            padding: 10px 20px;
+        }
+
+        #error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a nuestra de reserva de aulas</h1>
+    <p>Por favor, ingresa tus credenciales para continuar:</p>
+    <div id="login-form">
+        <input type="text" id="Reserva2024" placeholder="Usuario"><br>
+        <input type="password" id="Aula_2024_*" placeholder="Contraseña"><br>
+        <button onclick="login()">Iniciar Sesión</button>
+        <p id="error-message"></p>
+    </div>
+    <div class="button-container" style="display:none" id="download-buttons">
+        <button onclick="downloadFile('archivo1.pdf')">Descargar Archivo 1</button>
+        <button onclick="downloadFile('archivo2.zip')">Descargar Archivo 2</button>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            // Aquí puedes agregar lógica para validar las credenciales (por ejemplo, comparar con credenciales predefinidas)
+            if (username === "usuario" && password === "contraseña") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("download-buttons").style.display = "block";
+                document.getElementById("error-message").textContent = "";
+            } else {
+                document.getElementById("error-message").textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
+            }
+        }
+
+        function downloadFile(url) {
+            // Aquí puedes agregar lógica para descargar el archivo (por ejemplo, redireccionar a la URL del archivo)
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
