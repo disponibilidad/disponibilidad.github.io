@@ -21,9 +21,7 @@
         .button-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-
-            
+            align-items: center;    
             margin-top: 20px;
         }
 
@@ -60,14 +58,14 @@
 </head>
 <body>
     <h1>Bienvenido a nuestra página de reserva de aulas</h1>
-    <p id="txt1">Por favor, ingresa tus credenciales para continuar:</p>
+    <p id="txt">Por favor, ingresa tus credenciales para continuar:</p>
     <div id="login-form">
         <input type="text" id="username" placeholder="Usuario"><br>
         <input type="password" id="password" placeholder="Contraseña"><br>
         <button onclick="login()">Iniciar Sesión</button>
         <p id="error-message"></p>
     </div>
-    <div class="button-container" style="display:none" id="download-buttons">
+    <div class="button-container"  id="download-buttons">
         <!-- Google Calendar Appointment Scheduling begin -->
         <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
         <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -119,7 +117,7 @@
                 document.getElementById("login-form").style.display = "none";
                 document.getElementById("download-buttons").style.display = "block";
                 document.getElementById("error-message").textContent = "";
-                document.getElementById("txt1").textContent = "";
+                document.getElementById("txt").textContent = "";
             } else {
                 document.getElementById("error-message").textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
             }
