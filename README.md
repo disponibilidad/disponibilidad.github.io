@@ -22,8 +22,8 @@ Esta es una aplicación web simple que permite a los usuarios reservar aulas des
 
 ## Ejemplo de Credenciales
 
-- Usuario: Reserva2024
-- Contraseña: Aula_2024_*
+- Usuario: usuario
+- Contraseña: Contraseña
 
 **Nota:** Estas credenciales son solo para propósitos de demostración. En un entorno real, se recomienda utilizar un sistema de autenticación más seguro.
 
